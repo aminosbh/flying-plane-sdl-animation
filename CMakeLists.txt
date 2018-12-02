@@ -48,9 +48,9 @@ include_directories(${SDL2_INCLUDE_DIRS})
 target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARIES})
 
 # Add SDL2_image library
-#pkg_search_module(SDL2IMAGE REQUIRED SDL2_image>=2.0.0)
-#include_directories(${SDL2IMAGE_INCLUDE_DIRS})
-#target_link_libraries(${PROJECT_NAME} ${SDL2IMAGE_LIBRARIES})
+pkg_search_module(SDL2IMAGE REQUIRED SDL2_image>=2.0.0)
+include_directories(${SDL2IMAGE_INCLUDE_DIRS})
+target_link_libraries(${PROJECT_NAME} ${SDL2IMAGE_LIBRARIES})
 
 # Add SDL2_ttf library
 #pkg_search_module(SDL2TTF REQUIRED SDL2_ttf>=2.0.0)
@@ -58,7 +58,7 @@ target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARIES})
 #target_link_libraries(${PROJECT_NAME} ${SDL2TTF_LIBRARIES})
 
 # Add SDL2_gfx library
-#pkg_search_module(SDL2GFX REQUIRED SDL2_gfx)
-#include_directories(${SDL2GFX_INCLUDE_DIRS})
-#target_link_libraries(${PROJECT_NAME} ${SDL2GFX_LIBRARIES})
+pkg_search_module(SDL2GFX REQUIRED SDL2_gfx)
+include_directories(${SDL2GFX_INCLUDE_DIRS})
+target_link_libraries(${PROJECT_NAME} ${SDL2GFX_LIBRARIES})
 

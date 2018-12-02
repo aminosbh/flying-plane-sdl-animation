@@ -44,6 +44,14 @@ int main(int argc, char* argv[])
         return 0;
     }
 
+    // Initialize SDL image
+    int flags = IMG_INIT_JPG | IMG_INIT_PNG;
+    if((IMG_Init(flags) & flags) != flags) {
+        fprintf(stderr, "SDL_image could not be initialized with JPG and PNG support!\n"
+                        "SDL_image Error: %s\n", IMG_GetError());
+        return 0;
+    }
+
 #if linux && SDL_VERSION_ATLEAST(2, 0, 8)
     // Disable compositor bypass
     if(!SDL_SetHint(SDL_HINT_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR, "0"))
@@ -127,6 +135,9 @@ int main(int argc, char* argv[])
 
     // Destroy window
     SDL_DestroyWindow(window);
+
+    // Quit SDL_image
+    IMG_Quit();
 
     // Quit SDL
     SDL_Quit();
