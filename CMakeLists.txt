@@ -62,3 +62,5 @@ pkg_search_module(SDL2GFX REQUIRED SDL2_gfx)
 include_directories(${SDL2GFX_INCLUDE_DIRS})
 target_link_libraries(${PROJECT_NAME} ${SDL2GFX_LIBRARIES})
 
+# Copy assets
+file(COPY assets DESTINATION ${CMAKE_BINARY_DIR})
