@@ -28,29 +28,30 @@
  *
  */
 
-#ifndef UTILS_H
-#define UTILS_H
+#ifndef BACKGROUND_H
+#define BACKGROUND_H
 
-#include <stdio.h>
-#include <stdbool.h>
+#include "utils.h"
+#include "image.h"
 
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
-#include <SDL2/SDL2_framerate.h>
-
-// Define MAX and MIN macros
-#define MAX(X, Y) (((X) > (Y)) ? (X) : (Y))
-#define MIN(X, Y) (((X) < (Y)) ? (X) : (Y))
-
-
-enum Direction
+struct Background
 {
-    DIRECTION_STOP      = 0x0,
-    DIRECTION_UP        = 0x1,
-    DIRECTION_DOWN      = 0x2,
-    DIRECTION_RIGHT     = 0x4,
-    DIRECTION_LEFT      = 0x8
-};
-typedef enum Direction Direction;
+    // Image
+    Image image;
 
-#endif // UTILS_H
+    // Move direction
+    Direction direction;
+
+    // Speed in pixel/second
+    int speed;
+};
+typedef struct Background Background;
+
+bool Background_load(SDL_Renderer *renderer, Background *background, const char *file);
+void Background_destroy(Background *background);
+
+void Background_move(Background *background, int framerate);
+
+void Background_render(SDL_Renderer *renderer, Background *background, int width, int height);
+
+#endif // BACKGROUND_H
