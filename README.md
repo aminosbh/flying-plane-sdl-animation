@@ -1,6 +1,7 @@
-# Basic C SDL project
+# Flying plane SDL animation
 
-This project is a basic C [SDL][] project that uses [CMake][] as a build system.
+This project is written in C and uses [CMake][] as a build system.<br>
+It shows how we can make a basic animation using [SDL2][SDL] : Flying plane.
 
 ## Dependencies
 
@@ -29,8 +30,8 @@ sudo apt install libsdl2-image-dev libsdl2-ttf-dev libsdl2-gfx-dev
 
 ```sh
 # Clone this repo
-git clone https://gitlab.com/aminosbh/basic-c-sdl-project.git
-cd basic-c-sdl-project
+git clone https://gitlab.com/aminosbh/flying-plane-sdl-animation.git
+cd flying-plane-sdl-animation
 
 # Create a build folder
 mkdir build
@@ -41,7 +42,7 @@ cmake ..
 make
 
 # Run
-./basic-c-sdl-project
+./flying-plane-sdl-animation
 ```
 
 ***Note:*** To use SDL2_image, SDL2_ttf or SDL2_gfx, you should uncomment

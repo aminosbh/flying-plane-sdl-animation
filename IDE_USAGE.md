@@ -44,7 +44,7 @@ sudo apt install codeblocks
 
 ```sh
 # Create a folder for the Code::Blocks project
-cd basic-c-sdl-project
+cd flying-plane-sdl-animation
 mkdir -p build/codeblocks
 cd build/codeblocks
 
@@ -53,7 +53,7 @@ cmake ../.. -G "CodeBlocks - Unix Makefiles"
 ```
 
 *Open the project:*<br>
-Run Code::Blocks, and open the project in `basic-c-sdl-project/build/codeblocks`.<br>
+Run Code::Blocks, and open the project in `flying-plane-sdl-animation/build/codeblocks`.<br>
 Finally, build and run the project.
 
 
@@ -72,15 +72,15 @@ Offline package: https://www.eclipse.org/downloads/packages
 
 ```sh
 # Create a folder for the Eclipse project outside this project
-cd basic-c-sdl-project
-mkdir ../eclipse-basic-c-sdl-project
-cd ../eclipse-basic-c-sdl-project
+cd flying-plane-sdl-animation
+mkdir ../eclipse-flying-plane-sdl-animation
+cd ../eclipse-flying-plane-sdl-animation
 
 # Generate an Eclipse project
-cmake ../basic-c-sdl-project -G "Eclipse CDT4 - Unix Makefiles"
+cmake ../flying-plane-sdl-animation -G "Eclipse CDT4 - Unix Makefiles"
 ```
 *Open the project:*<br>
-Run Eclipse, and open the project in `eclipse-basic-c-sdl-project`.<br>
+Run Eclipse, and open the project in `eclipse-flying-plane-sdl-animation`.<br>
 Create a new run configuration: Go to `Run` &gt; `Run configurations` &gt;
 `C\C++ Application` and specify the C/C++ Application using `Search Project...`<br>
 Finally, build and run the project.
