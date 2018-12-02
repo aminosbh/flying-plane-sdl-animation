@@ -29,6 +29,7 @@
  */
 
 #include "utils.h"
+#include "animation.h"
 
 // Define screen dimensions
 #define SCREEN_WIDTH    800
@@ -83,6 +84,8 @@ int main(int argc, char* argv[])
         }
         else
         {
+            // Start animation
+            Animation_start(renderer, SCREEN_WIDTH, SCREEN_HEIGHT);
 
             // Destroy renderer
             SDL_DestroyRenderer(renderer);
