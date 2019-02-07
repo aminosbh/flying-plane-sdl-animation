@@ -50,6 +50,9 @@ void Background_move(Background *background, int framerate)
 
 void Background_render(SDL_Renderer *renderer, Background *background, int width, int height)
 {
+    // Unused width
+    (void) width;
+
     SDL_Rect crop = background->image.rect;
 
     if(background->direction == DIRECTION_DOWN)

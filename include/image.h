@@ -39,7 +39,7 @@ struct Image
     SDL_Texture *texture;
 
     // Original width and height
-    unsigned int w, h;
+    int w, h;
 
     // Current coordinates, width and height
     SDL_Rect rect;
